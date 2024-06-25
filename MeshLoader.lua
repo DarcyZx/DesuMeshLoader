@@ -96,7 +96,6 @@ else
         holo:setMesh(mesh_)
         holo:setMeshMaterial(texture)
         holo:setRenderBounds(Vector(-10000),Vector(10000))
-        holo:suppressEngineLighting(true)
     end
     
     function createMeshFromOBJ()
