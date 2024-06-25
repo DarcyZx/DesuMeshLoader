@@ -19,7 +19,7 @@ if CLIENT then
   --the texture image must be 1024x1024 resolution, with the current implementation if two objects use the same texture it must be loaded for each of them, I'll probably fix this eventually
   --bumpmap images follow the same 1024x1024 rule as the base texture image, bumpmaps are optional, if the 3rd arg is an integer instead of a string it will be treated as a flag
   --the flag values can be found here: https://developer.valvesoftware.com/wiki/Material_Flags, they are optional
-  -- objName is for No Render Lightning on the Mesh (Only can be one)
+  --objName is for No Render Lightning on the Mesh (Only can be one)
   --you can disable others meshes by making them into comments
 
   --addObjectTexturePair("Bomber", "https://raw.githubusercontent.com/DarcyZx/Karts/main/boomber_kart_texture.png")
