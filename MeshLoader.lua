@@ -1,3 +1,6 @@
+--@name desu_mesh_loader
+--@author
+
 if SERVER then
     
     local function createWireInputs(objectNameTable)
@@ -32,6 +35,7 @@ else
     local textureFlags = {}
     local bumpmapURLs = {}
     local holoTable = {}
+    local objNames = {}
     
     function loadOBJFromURL(objURL, scale, zOffset)
         OBJFileURL = objURL
@@ -56,6 +60,11 @@ else
     local function createHolo(objectName)
         local holo = holograms.create(chip():getPos()+Vector(0,0,zAxisOffset), chip():localToWorldAngles(Angle(0,0,90)), "models/hunter/blocks/cube025x025x025.mdl", Vector(0))
         holo:setParent(chip())
+        
+        if objName == objectName then
+        holo:suppressEngineLighting(true)
+        end
+        
         local objectNameCapitalized = string.gsub(string.gsub(objectName,"^%l",string.upper),"[%p%c%s]","")
         holoTable[objectNameCapitalized] = holo
         return holo
