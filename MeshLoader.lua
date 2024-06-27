@@ -104,7 +104,7 @@ else
     local function setHoloMesh(holo, mesh_, texture)
         holo:setMesh(mesh_)
         holo:setMeshMaterial(texture)
-        holo:setRenderBounds(Vector(-10000),Vector(10000))
+        holo:setRenderBounds(Vector(-5000),Vector(5000))
     end
     
     function createMeshFromOBJ()
