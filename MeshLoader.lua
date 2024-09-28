@@ -64,6 +64,18 @@ else
         if objName == objectName then
         holo:suppressEngineLighting(true)
         end
+
+        if objName2 == objectName then
+        holo:suppressEngineLighting(true)
+        end
+
+        if objName3 == objectName then
+        holo:suppressEngineLighting(true)
+        end
+
+        if objName4 == objectName then
+        holo:suppressEngineLighting(true)
+        end
         
         local objectNameCapitalized = string.gsub(string.gsub(objectName,"^%l",string.upper),"[%p%c%s]","")
         holoTable[objectNameCapitalized] = holo
